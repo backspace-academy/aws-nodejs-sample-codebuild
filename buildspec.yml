@@ -28,6 +28,5 @@ artifacts:
     - app.js
     - index.html
     - package.json
-    - cron.yaml
     - node_modules/async/*
     - node_modules/lodash/*
