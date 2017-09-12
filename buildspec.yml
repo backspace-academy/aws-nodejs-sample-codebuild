@@ -23,4 +23,4 @@ artifacts:
     - app.js
     - index.html
     - package.json
-    - .ebextensions/startcommand.config
+    - .ebextensions/logging.config
