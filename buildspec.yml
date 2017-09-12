@@ -24,3 +24,4 @@ artifacts:
     - index.html
     - package.json
     - .ebextensions/logging.config
+    - .ebextensions/startcommand.config
