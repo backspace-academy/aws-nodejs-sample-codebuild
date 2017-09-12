@@ -24,4 +24,3 @@ artifacts:
     - index.html
     - package.json
     - cron.yaml
-    - .ebextensions/logging.config
