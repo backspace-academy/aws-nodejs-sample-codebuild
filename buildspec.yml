@@ -23,5 +23,5 @@ artifacts:
     - app.js
     - index.html
     - package.json
+    - cron.yaml
     - .ebextensions/logging.config
-    - .ebextensions/startcommand.config
