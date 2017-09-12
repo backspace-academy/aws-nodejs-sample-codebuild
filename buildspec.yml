@@ -24,3 +24,4 @@ artifacts:
     - index.html
     - package.json
     - cron.yaml
+    - node_modules/**/*
