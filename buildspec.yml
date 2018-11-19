@@ -11,6 +11,8 @@ phases:
       - echo Installing source NPM dependencies...
       - npm install
       - npm install unit.js
+      # Added by Wasim to test npm package
+      - npm install angular
   build:
     commands:
       - echo Build started on `date`
