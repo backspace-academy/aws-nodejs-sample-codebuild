@@ -1,32 +1,43 @@
-# Do not change version. This is the version of aws buildspec, not the version of your buldspec file.
 version: 0.2
+
+#env:
+  #variables:
+     # key: "value"
+     # key: "value"
+  #parameter-store:
+     # key: "value"
+     # key: "value"
+  #git-credential-helper: yes
 
 phases:
   install:
     commands:
-      - echo Installing Mocha...
-      - npm install -g mocha
+      - echo node --version
+      - npm install
+    runtime-versions:
+      nodejs: 10
+    #commands:
+      # - command
+      # - command
   pre_build:
     commands:
-      - echo Installing source NPM dependencies...
-      - npm install
-      - npm install unit.js
+      - echo 'Running build' 
+      # - command
   build:
     commands:
-      - echo Build started on `date`
-      - echo Compiling the Node.js code
-      - mocha test.js
-  post_build:
-    commands:
-      - echo Build completed on `date`
-# Include only the files required for your application to run.
-# Do not use recursively include artifacts from node_modules directory as it will include unnecessary packages 
-# used only for building and testing.
-# ExpressJS apps will need other artifact directories included (bin/*, public/*, routes/*, views/* etc).
+      - npm run export
+      # - command
+  #post_build:
+    #commands:
+      # - command
+      # - command
 artifacts:
   files:
-    - app.js
-    - index.html
-    - package.json
-    - node_modules/async/*
-    - node_modules/lodash/*
+    - out/*
+    # - location
+  #name: $(date +%Y-%m-%d)
+  discard-paths: yes
+  #base-directory: '/out'
+#cache:
+  #paths:
+    # - paths
