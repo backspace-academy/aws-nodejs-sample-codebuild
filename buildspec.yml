@@ -11,8 +11,7 @@ phases:
   pre_build:
     commands:
       - echo Installing source NPM dependencies...
-      - echo env
-      - print env
+      - printenv
       - npm install
       - npm install unit.js
   build:
