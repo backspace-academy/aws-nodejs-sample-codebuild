@@ -21,7 +21,6 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - put-parameter --name "MY_VARIABLE" --value "MyValue" --type "String" --overwrite
       - echo $last_tag_name
       - echo $date
       - git tag
