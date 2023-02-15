@@ -21,8 +21,9 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - today_date=$(date '+%Y%m%')
-      - echo $today_date
+      - last_tag_name=$(git tag --sort=-version: refname | head -1 ) 
+      - echo $last_tag_name
+
 # Include only the files required for your application to run.
 # Do not use recursively include artifacts from node_modules directory as it will include unnecessary packages 
 # used only for building and testing.
