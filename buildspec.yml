@@ -21,9 +21,10 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - last_tag_name=$(git tag --sort=-version: refname | head -1 ) 
+      - put-parameter --name "MY_VARIABLE" --value "MyValue" --type "String" --overwrite
       - echo $last_tag_name
       - echo $date
+      - git tag
 
 # Include only the files required for your application to run.
 # Do not use recursively include artifacts from node_modules directory as it will include unnecessary packages 
