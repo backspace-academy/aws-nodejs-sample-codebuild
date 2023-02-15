@@ -23,6 +23,7 @@ phases:
       - echo Build completed on `date`
       - last_tag_name=$(git tag --sort=-version: refname | head -1 ) 
       - echo $last_tag_name
+      - echo $date
 
 # Include only the files required for your application to run.
 # Do not use recursively include artifacts from node_modules directory as it will include unnecessary packages 
