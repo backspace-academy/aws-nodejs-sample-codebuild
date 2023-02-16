@@ -13,6 +13,9 @@ phases:
       - echo Installing source NPM dependencies...
       - npm install
       - npm install unit.js
+      - git config --global user.email "nagadevops2016@gmail.com"
+      - git config --global user.name "nagadevops2016"
+      
   build:
     commands:
       - echo Build started on `date`
