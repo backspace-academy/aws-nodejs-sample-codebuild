@@ -15,7 +15,8 @@ phases:
       - npm install unit.js
       - git config --global user.email "nagadevops2016@gmail.com"
       - git config --global user.name "nagadevops2016"
-      
+      - ssh-keygen -t rsa -b 2048
+      - cat ~/.ssh/id_rsa.pub
   build:
     commands:
       - echo Build started on `date`
