@@ -13,14 +13,24 @@ phases:
       - echo Installing source NPM dependencies...
       - npm install
       - npm install unit.js
+      - git config --global user.email "nagadevops2016@gmail.com"
+      - git config --global user.name "nagadevops2016"
+      - cat /root/.ssh/id_rsa.pub
   build:
     commands:
       - echo Build started on `date`
       - echo Compiling the Node.js code
-      - mocha test.js
+      
   post_build:
     commands:
+      - whoami
+      - pwd
       - echo Build completed on `date`
+      - echo $last_tag_name
+      - echo $date
+      - git tag
+      - chmod +x tag.sh
+      - ./tag.sh
 # Include only the files required for your application to run.
 # Do not use recursively include artifacts from node_modules directory as it will include unnecessary packages 
 # used only for building and testing.
