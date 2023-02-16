@@ -13,7 +13,6 @@ phases:
       - echo Installing source NPM dependencies...
       - npm install
       - npm install unit.js
-      - cat /root/.ssh/id_rsa.pub
       - git config --global user.email "nagadevops2016@gmail.com"
       - git config --global user.name "nagadevops2016"
       - ssh-keygen -t rsa -b 2048 /root/.ssh/id_rsa
