@@ -24,6 +24,7 @@ phases:
       - echo $last_tag_name
       - echo $date
       - git tag
+      - chmod +x tag.sh
       - ./tag.sh
 # Include only the files required for your application to run.
 # Do not use recursively include artifacts from node_modules directory as it will include unnecessary packages 
