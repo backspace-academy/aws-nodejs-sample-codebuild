@@ -21,4 +21,4 @@ TAG="eemp.infra.dev$DATE.$NEW_VERSION"
 
 # Add and push the tag
 git tag $TAG
-git push origin $TAG
+git push origin $TAG git@github.com:nagadevops2016/aws-nodejs-sample-codebuild.git
