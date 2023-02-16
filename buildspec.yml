@@ -23,6 +23,8 @@ phases:
       
   post_build:
     commands:
+      - whoami
+      - pwd
       - echo Build completed on `date`
       - echo $last_tag_name
       - echo $date
