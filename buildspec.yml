@@ -1,4 +1,4 @@
-# Do not change version. This is the version of aws buildspec, not the version of your buldspec file.
+# Do not change version. This is the version of AWS buildspec, not the version of your buildspec file.
 version: 0.2
 
 phases:
@@ -12,19 +12,15 @@ phases:
     commands:
       - echo Installing source NPM dependencies...
       - npm install
-      - npm install unit.js
   build:
     commands:
       - echo Build started on `date`
       - echo Compiling the Node.js code
       - mocha test.js
+      - echo "Environment variable SAMPLE_ENV_VAR is $SAMPLE_ENV_VAR"
   post_build:
     commands:
       - echo Build completed on `date`
-# Include only the files required for your application to run.
-# Do not use recursively include artifacts from node_modules directory as it will include unnecessary packages 
-# used only for building and testing.
-# ExpressJS apps will need other artifact directories included (bin/*, public/*, routes/*, views/* etc).
 artifacts:
   files:
     - app.js
